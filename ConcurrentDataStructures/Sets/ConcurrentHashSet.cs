@@ -15,14 +15,6 @@ namespace ConcurrentDataStructures.Sets
 
         public int Count => _map.Count;
 
-        public bool this[TVal val]
-        {
-            set
-            {
-                TryAdd(val);
-            }
-        }
-
         public bool TryAdd(TVal val)
         {
             return _map.TryAdd(val, new byte());
@@ -36,6 +28,11 @@ namespace ConcurrentDataStructures.Sets
         public bool ContainsKey(TVal val)
         {
             return _map.ContainsKey(val);
+        }
+
+        public void Clear()
+        {
+            _map.Clear();
         }
 
         public IEnumerator<TVal> GetEnumerator()

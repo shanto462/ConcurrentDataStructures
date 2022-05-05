@@ -19,12 +19,6 @@ namespace ConcurrentDataStructures.Test
 
         }
 
-        #region Index Test
-
-
-
-        #endregion
-
         #region Iterator Test
 
         [Test]

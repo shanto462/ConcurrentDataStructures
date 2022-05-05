@@ -62,6 +62,11 @@ namespace ConcurrentDataStructures.Dictionaries
             return _map.ContainsKey(key);
         }
 
+        public void Clear()
+        {
+            _map.Clear();
+        }
+
         public IEnumerator<KeyValuePair<TKey, ConcurrentHashSet<TValue>>> GetEnumerator()
         {
             return _map.GetEnumerator().Cast<KeyValuePair<TKey, ConcurrentHashSet<TValue>>>();
